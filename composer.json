@@ -4,12 +4,12 @@
     "keywords": [
         "pi",
         "pi-network",
-        "horizon",
+        "pi-horizon",
         "php",
-        "sdk",
-        "api",
-        "blockchain",
-        "cryptocurrency"
+        "pi-sdk",
+        "pi-api",
+        "pi-blockchain",
+        "pi-cryptocurrency"
     ],
     "homepage": "https://github.com/greenarmor/phpi-sdk",
     "type": "library",
