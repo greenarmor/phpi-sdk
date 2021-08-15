@@ -7,7 +7,7 @@
 3. Pi Payment with Secretkey Demo [here.](https://pipass-privkey.fastlanepi.xyz/sendpayment-secretkey.php)
 4. Demo of your Pi wallet history [here.](https://pipass-privkey.fastlanepi.xyz/transactionlist.php)
 5. Create and fund your secondary wallet(Demo) [here.](https://pipass-privkey.fastlanepi.xyz/createaccount.php)
-6. Buy FLPi Token with Pi for Fastlanepi.store [here.](https://pipass-privkey.fastlanepi.xyz/buy-FLPI-token-with-PI.php)
+6.Get free FLPi Token used for Fastlanepi.store [here.](https://pipass-privkey.fastlanepi.xyz/Donate-FLPI-token-with-PI.php)
 7. Multisig Demo [ON PROGRESS](https://github.com/greenarmor/phpi-sdk)
 8. Escrow demo [ON PROGRESS](https://github.com/greenarmor/phpi-sdk)
 9. Creating Pi token [ON PROGRESS](https://github.com/greenarmor/phpi-sdk)
