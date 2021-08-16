@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+# PHPI-SDK
+## PHP Pi Horizon Client Library
 
-You can use the [editor on GitHub](https://github.com/greenarmor/phpi-sdk/edit/ghpages/docs/index.md) to maintain and preview the content for your website in Markdown files.
+###### This is part of FASTLANE project for the pi payment gateway, as we are trying to build a pi wallet inside FASTLANEPI Store
+1. Demo to reverse passphrase to keypair [here.](https://pipass-privkey.fastlanepi.xyz)
+2. Pi Payment with Passphrase Demo [here.](https://pipass-privkey.fastlanepi.xyz/payment-tx-demo.php)
+3. Pi Payment with Secretkey Demo [here.](https://pipass-privkey.fastlanepi.xyz/sendpayment-secretkey.php)
+4. Demo of your Pi wallet history [here.](https://pipass-privkey.fastlanepi.xyz/transactionlist.php)
+5. Create and fund your secondary wallet(Demo) [here.](https://pipass-privkey.fastlanepi.xyz/createaccount.php)
+6. Buy FLPi Token with your Test Pi used for Fastlanepi.store [here.](https://pipass-privkey.fastlanepi.xyz/Buy-FLPI-token-with-PI.php)
+7. Multisig Demo [ON PROGRESS](https://github.com/greenarmor/phpi-sdk)
+8. Escrow demo [ON PROGRESS](https://github.com/greenarmor/phpi-sdk)
+9. Creating Pi token [ON PROGRESS](https://github.com/greenarmor/phpi-sdk)
+10. etc.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## Installation from source
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/greenarmor/phpi-sdk/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+git clone https://github.com/greenarmor/phpi-sdk.git  
+cd phpi-sdk
+composer install
+``` 
+## Installation for existing project
+```
+composer require greenarmor/phpi-sdk:dev-main 
+``` 
