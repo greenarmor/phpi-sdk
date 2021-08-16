@@ -1,7 +1,10 @@
 # PHPI-SDK
 ## PHP Pi Horizon Client Library
 
-###### This is part of FASTLANE project for the pi payment gateway, as we are trying to build a pi wallet inside FASTLANEPI Store
+###### This is part of FASTLANE project for the pi payment gateway, as we are trying to build a pi wallet inside FASTLANEPI Store.
+###### FASTLANE is not a marketplace but an online store provider for pioneers and we are not limited to that service alone.
+###### We aimed to be a goto place for sellers because of the tools we offer. eg. Escrow, Multisig account (when store are not limited to one owner).
+
 1. Demo to reverse passphrase to keypair [here.](https://pipass-privkey.fastlanepi.xyz)
 2. Pi Payment with Passphrase Demo [here.](https://pipass-privkey.fastlanepi.xyz/payment-tx-demo.php)
 3. Pi Payment with Secretkey Demo [here.](https://pipass-privkey.fastlanepi.xyz/sendpayment-secretkey.php)
