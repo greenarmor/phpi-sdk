@@ -24,5 +24,5 @@ composer install
 ``` 
 ## Installation for existing project
 ```
-composer require greenarmor/phpi-sdk:dev-main 
+composer require greenarmor/phpi-sdk
 ``` 
