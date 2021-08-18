@@ -52,6 +52,17 @@ class Keypair
     {
         return self::newFromRawSeed(random_bytes(32));
     }
+    /**
+     * Creates a new random keypair with random mnemonic
+     *
+     * @return Keypair
+     */
+    public static function newWithMnemonic($words = 24)
+    {
+        $bip39 = new Bip39();
+
+        return self::newFromMnemonic($bip39->createMnemonic($words));
+    }
 
     /**
      * Creates a new keypair from a base-32 encoded string (S...)
