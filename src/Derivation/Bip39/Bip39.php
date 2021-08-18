@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Derivation\Bip39;
+namespace PiSdk\Api\Derivation\Bip39;
 
 
-use Greenarmor\\PiSdk\Util\Debug;
+use PiSdk\Api\Util\Debug;
 
 /**
  * Minimal BIP-39 implementation (only what's necessary to generate seeds for

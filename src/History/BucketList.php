@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\History;
+namespace PiSdk\Api\History;
 
 
 /**

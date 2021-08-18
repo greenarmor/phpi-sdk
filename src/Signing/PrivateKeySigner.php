@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Signing;
+namespace PiSdk\Api\Signing;
 
 
-use Greenarmor\\PiSdk\Keypair;
-use Greenarmor\\PiSdk\Transaction\TransactionBuilder;
-use Greenarmor\\PiSdk\XdrModel\DecoratedSignature;
+use PiSdk\Api\Keypair;
+use PiSdk\Api\Transaction\TransactionBuilder;
+use PiSdk\Api\XdrModel\DecoratedSignature;
 
 /**
  * Capable of signing with a Keypair containing the secret key

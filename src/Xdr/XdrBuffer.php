@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Xdr;
+namespace PiSdk\Api\Xdr;
 
 use phpseclib3\Math\BigInteger;
 

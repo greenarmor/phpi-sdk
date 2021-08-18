@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Xdr;
+namespace PiSdk\Api\Xdr;
 
 
-use Greenarmor\\PiSdk\Util\MathSafety;
+use PiSdk\Api\Util\MathSafety;
 
 class XdrDecoder
 {

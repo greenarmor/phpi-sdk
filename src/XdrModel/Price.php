@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\XdrModel;
+namespace PiSdk\Api\XdrModel;
 
 
-use Greenarmor\\PiSdk\Xdr\Iface\XdrEncodableInterface;
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
-use Greenarmor\\PiSdk\Xdr\XdrEncoder;
+use PiSdk\Api\Xdr\Iface\XdrEncodableInterface;
+use PiSdk\Api\Xdr\XdrBuffer;
+use PiSdk\Api\Xdr\XdrEncoder;
 
 /**
  * https://github.com/stellar/stellar-core/blob/master/src/xdr/Stellar-ledger-entries.x#L47

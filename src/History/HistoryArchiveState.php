@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\History;
+namespace PiSdk\Api\History;
 
-use Greenarmor\\PiSdk\Util\Json;
+use PiSdk\Api\Util\Json;
 
 
 /**

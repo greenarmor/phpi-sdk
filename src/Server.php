@@ -1,17 +1,16 @@
 <?php
 
-namespace Greenarmor\\PiSdk;
+namespace PiSdk\Api;
 
 
+use phpseclib\Math\BigInteger;
 use Prophecy\Exception\InvalidArgumentException;
-use Greenarmor\\PiSdk\Horizon\ApiClient;
-use Greenarmor\\PiSdk\Horizon\Exception\HorizonException;
-use Greenarmor\\PiSdk\Model\Account;
-use Greenarmor\\PiSdk\Model\Ledger;
-use Greenarmor\\PiSdk\Model\Payment;
-use Greenarmor\\PiSdk\Signing\SigningInterface;
-use Greenarmor\\PiSdk\Transaction\TransactionBuilder;
-use Greenarmor\\PiSdk\XdrModel\Asset;
+use PiSdk\Api\Horizon\ApiClient;
+use PiSdk\Api\Horizon\Exception\HorizonException;
+use PiSdk\Api\Model\Account;
+use PiSdk\Api\Model\Payment;
+use PiSdk\Api\Signing\SigningInterface;
+use PiSdk\Api\Transaction\TransactionBuilder;
 
 class Server
 {
@@ -21,9 +20,10 @@ class Server
     private $apiClient;
 
     /**
-     * @var bool
+     * @var
      */
-    protected $isTestnet;
+    private $isTestnet;
+
 
     /**
      * @var SigningInterface
@@ -88,8 +88,7 @@ class Server
 
         try {
             $response = $this->apiClient->get(sprintf('/accounts/%s', $accountId));
-        }
-        catch (HorizonException $e) {
+        } catch (HorizonException $e) {
             // Account not found, return null
             if ($e->getHttpStatusCode() === 404) {
                 return null;
@@ -103,147 +102,6 @@ class Server
         $account->setApiClient($this->apiClient);
 
         return $account;
-    }
-
-    /**
-     * @param \Greenarmor\\PiSdk\XdrModel\Asset $asset
-     * @throws InvalidArgumentException
-     * @return string
-     */
-    private static function encodeAsset(Asset $asset): string
-    {
-        switch ($asset->getType()) {
-            case Asset::TYPE_NATIVE:
-                return 'native';
-            case Asset::TYPE_ALPHANUM_4:
-            case Asset::TYPE_ALPHANUM_12:
-                return $asset->getAssetCode() . ':' . $asset->getIssuer()->getAccountIdString();
-            default:
-                throw new \InvalidArgumentException('Invalid asset type ' . $asset->getType());
-        }
-    }
-
-    /**
-     * Returns all accounts who are trustees to a specific asset.
-     *
-     * @param string $assetCode
-     * @param string $assetIssuerId Every account in the result will have a trustline for the given asset.
-     * @param string $order
-     * @param int $limit
-     * @return Account[]
-     * @throws \Greenarmor\\PiSdk\Horizon\Exception\HorizonException
-     */
-    public function getAccountsForAsset(string $assetCode, string $assetIssuerId, string $order = 'asc', int $limit = 10): array
-    {
-        $asset = Asset::newCustomAsset($assetCode, $assetIssuerId);
-
-        if (!in_array($order, ['asc', 'desc'])) {
-            throw new \InvalidArgumentException('Order must be either asc or desc');
-        }
-
-        // todo remove limit max value when implement paging, maybe -1 or null for all records
-        if ($limit < 1 || $limit > 200) {
-            throw new \InvalidArgumentException('Limit must be in range 1-200');
-        }
-
-        $params = [
-            'asset' => self::encodeAsset($asset),
-            'order' => $order,
-            'limit' => $limit,
-        ];
-        $url = '/accounts' . '?' . http_build_query($params);
-        $records = $this->apiClient->get($url)->getRecords();
-        return array_map(fn ($r) => Account::fromRawResponseData($r), $records);
-    }
-
-    /**
-     * @param string $signerId Account ID of the signer. Every account in the result
-     * will have the given account ID as a signer.
-     * @param string $order
-     * @param int $limit
-     * @return Account[]
-     * @throws \Greenarmor\\PiSdk\Horizon\Exception\HorizonException
-     */
-    public function getAccountsForSigner(string $signerId, string $order = 'asc', int $limit = 10): array
-    {
-        if (!in_array($order, ['asc', 'desc'])) {
-            throw new \InvalidArgumentException('Order must be either asc or desc');
-        }
-
-        // todo remove limit max value when implement paging, maybe -1 or null for all records
-        if ($limit < 1 || $limit > 200) {
-            throw new \InvalidArgumentException('Limit must be in range 1-200');
-        }
-
-        $params = [
-            'signer' => $signerId,
-            'order' => $order,
-            'limit' => $limit,
-        ];
-        $url = '/accounts' . '?' . http_build_query($params);
-        $records = $this->apiClient->get($url)->getRecords();
-        return array_map(fn ($r) => Account::fromRawResponseData($r), $records);
-    }
-
-    /**
-     * Retrieve an Account's Data
-     *
-     * {@see https://developers.stellar.org/api/resources/accounts/data/}
-     *
-     * @param string $account_id
-     * @param string $key
-     * @return string|null
-     * @throws \Greenarmor\\PiSdk\Horizon\Exception\HorizonException
-     */
-    public function getAccountDataByKey(string $account_id, string $key): ?string
-    {
-        $url = sprintf('/accounts/%s/data/%s', $account_id, $key);
-
-        try {
-            $response = $this->apiClient->get($url);
-        } catch (HorizonException $e) {
-            // key not found, return null
-            if ($e->getHttpStatusCode() === 404) {
-                return null;
-            }
-
-            // A problem we can't handle, rethrow
-            throw $e;
-        }
-
-        return base64_decode($response->getField('value'));
-    }
-
-    /**
-     * https://developers.stellar.org/api/resources/ledgers/list/
-     * @param string|null $cursor
-     * @param string $order
-     * @param int $limit
-     * @return Ledger[]
-     * @throws \Greenarmor\\PiSdk\Horizon\Exception\HorizonException
-     */
-    public function getLedgers(?string $cursor = null, string $order = 'asc', int $limit = 10): array
-    {
-        if (!in_array($order, ['asc', 'desc'])) {
-            throw new \InvalidArgumentException('Order must be either asc or desc');
-        }
-
-        // todo remove limit max value when implement paging, maybe -1 or null for all records
-        if ($limit < 1 || $limit > 200) {
-            throw new \InvalidArgumentException('Limit must be in range 1-200');
-        }
-
-        $params = [
-            'order' => $order,
-            'limit' => $limit,
-        ];
-        if (isset($cursor)) {
-            $params['cursor'] = $cursor;
-        }
-
-        $url = '/ledgers' . '?' . http_build_query($params);
-        $records = $this->apiClient->get($url)->getRecords();
-        return array_map(fn ($r) => Ledger::fromRawResponseData($r), $records);
     }
 
     /**
@@ -281,8 +139,7 @@ class Server
 
         return (new TransactionBuilder($accountId))
             ->setApiClient($this->apiClient)
-            ->setSigningProvider($this->signingProvider)
-        ;
+            ->setSigningProvider($this->signingProvider);
     }
 
     /**
@@ -317,8 +174,7 @@ class Server
         try {
             $this->apiClient->get(sprintf('/friendbot?addr=%s', $accountId));
             return true;
-        }
-        catch (HorizonException $e) {
+        } catch (HorizonException $e) {
             // Account has already been funded
             if ($e->getHttpStatusCode() == 400) {
                 return false;
@@ -327,7 +183,6 @@ class Server
             // Unexpected exception
             throw $e;
         }
-
     }
 
     /**

@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\XdrModel;
+namespace PiSdk\Api\XdrModel;
 
 
 use phpseclib3\Math\BigInteger;
-use Greenarmor\\PiSdk\Model\PiAmount;
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
+use PiSdk\Api\Model\PiAmount;
+use PiSdk\Api\Xdr\XdrBuffer;
 
 class TransactionResult
 {

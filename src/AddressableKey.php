@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk;
+namespace PiSdk\Api;
 
 use Base32\Base32;
 use ParagonIE\Sodium\Core\Ed25519;
-use Greenarmor\\PiSdk\Util\Checksum;
-use Greenarmor\\PiSdk\Util\Debug;
+use PiSdk\Api\Util\Checksum;
+use PiSdk\Api\Util\Debug;
 
 
 /**

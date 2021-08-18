@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Derivation;
+namespace PiSdk\Api\Derivation;
 
 
-use Greenarmor\\PiSdk\Util\MathSafety;
+use PiSdk\Api\Util\MathSafety;
 
 /**
  * A Hierarchical Deterministic node for use with Stellar

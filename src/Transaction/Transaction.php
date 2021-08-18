@@ -1,16 +1,16 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Transaction;
+namespace PiSdk\Api\Transaction;
 
 use phpseclib3\Math\BigInteger;
-use Greenarmor\\PiSdk\Model\PiAmount;
-use Greenarmor\\PiSdk\Server;
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
-use Greenarmor\\PiSdk\XdrModel\AccountId;
-use Greenarmor\\PiSdk\XdrModel\Memo;
-use Greenarmor\\PiSdk\XdrModel\Operation\Operation;
-use Greenarmor\\PiSdk\XdrModel\TimeBounds;
+use PiSdk\Api\Model\PiAmount;
+use PiSdk\Api\Server;
+use PiSdk\Api\Xdr\XdrBuffer;
+use PiSdk\Api\XdrModel\AccountId;
+use PiSdk\Api\XdrModel\Memo;
+use PiSdk\Api\XdrModel\Operation\Operation;
+use PiSdk\Api\XdrModel\TimeBounds;
 
 
 /**

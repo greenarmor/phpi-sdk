@@ -1,31 +1,31 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\XdrModel\Operation;
+namespace PiSdk\Api\XdrModel\Operation;
 
 
-use Greenarmor\\PiSdk\Keypair;
-use Greenarmor\\PiSdk\Xdr\Iface\XdrEncodableInterface;
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
-use Greenarmor\\PiSdk\Xdr\XdrEncoder;
-use Greenarmor\\PiSdk\XdrModel\AccountId;
+use PiSdk\Api\Keypair;
+use PiSdk\Api\Xdr\Iface\XdrEncodableInterface;
+use PiSdk\Api\Xdr\XdrBuffer;
+use PiSdk\Api\Xdr\XdrEncoder;
+use PiSdk\Api\XdrModel\AccountId;
 
 /**
  * Known operation types:
  *
-    xdr.enum("OperationType", {
-        createAccount: 0,
-        payment: 1,
-        pathPayment: 2,
-        manageOffer: 3,
-        createPassiveOffer: 4,
-        setOption: 5,
-        changeTrust: 6,
-        allowTrust: 7,
-        accountMerge: 8,
-        inflation: 9,
-        manageDatum: 10,
-    });
+ *  xdr.enum("OperationType", {
+ *       createAccount: 0,
+ *      payment: 1,
+ *       pathPayment: 2,
+ *      manageOffer: 3,
+ *       createPassiveOffer: 4,
+ *       setOption: 5,
+ *       changeTrust: 6,
+ *       allowTrust: 7,
+ *       accountMerge: 8,
+ *       inflation: 9,
+ *       manageDatum: 10,
+ *   });
  *
  * See: https://github.com/stellar/stellar-core/blob/master/src/xdr/Stellar-transaction.x
  *

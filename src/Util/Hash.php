@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Util;
+namespace PiSdk\Api\Util;
 
 
 class Hash

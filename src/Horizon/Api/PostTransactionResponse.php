@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Horizon\Api;
+namespace PiSdk\Api\Horizon\Api;
 
 
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
-use Greenarmor\\PiSdk\XdrModel\TransactionResult;
+use PiSdk\Api\Xdr\XdrBuffer;
+use PiSdk\Api\XdrModel\TransactionResult;
 
 class PostTransactionResponse extends HorizonResponse
 {

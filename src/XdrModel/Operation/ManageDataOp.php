@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\XdrModel\Operation;
+namespace PiSdk\Api\XdrModel\Operation;
 
 
-use Greenarmor\\PiSdk\Util\Debug;
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
-use Greenarmor\\PiSdk\Xdr\XdrEncoder;
+use PiSdk\Api\Util\Debug;
+use PiSdk\Api\Xdr\XdrBuffer;
+use PiSdk\Api\Xdr\XdrEncoder;
 
 /**
  * https://github.com/stellar/stellar-core/blob/master/src/xdr/Stellar-transaction.x#L218

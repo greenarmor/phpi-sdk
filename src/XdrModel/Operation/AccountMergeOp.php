@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\XdrModel\Operation;
+namespace PiSdk\Api\XdrModel\Operation;
 
 
-use Greenarmor\\PiSdk\Keypair;
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
-use Greenarmor\\PiSdk\XdrModel\AccountId;
+use PiSdk\Api\Keypair;
+use PiSdk\Api\Xdr\XdrBuffer;
+use PiSdk\Api\XdrModel\AccountId;
 
 class AccountMergeOp extends Operation
 {

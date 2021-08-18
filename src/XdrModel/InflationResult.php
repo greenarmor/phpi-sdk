@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\XdrModel;
+namespace PiSdk\Api\XdrModel;
 
 
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
+use PiSdk\Api\Xdr\XdrBuffer;
 
 class InflationResult extends OperationResult
 {

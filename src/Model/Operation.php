@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Model;
+namespace PiSdk\Api\Model;
 
-use Greenarmor\\PiSdk\XdrModel\Operation\BumpSequenceOp;
+use PiSdk\Api\XdrModel\Operation\BumpSequenceOp;
 
 
 /**
