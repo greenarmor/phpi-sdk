@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Horizon\Exception;
+namespace PiSdk\Api\Horizon\Exception;
 
 
 use GuzzleHttp\Exception\ClientException;

@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Xdr\Type;
+namespace PiSdk\Api\Xdr\Type;
 
 
 use Countable;
-use Greenarmor\\PiSdk\Xdr\Iface\XdrEncodableInterface;
-use Greenarmor\\PiSdk\Xdr\XdrEncoder;
+use PiSdk\Api\Xdr\Iface\XdrEncodableInterface;
+use PiSdk\Api\Xdr\XdrEncoder;
 
 class VariableArray implements XdrEncodableInterface, Countable
 {

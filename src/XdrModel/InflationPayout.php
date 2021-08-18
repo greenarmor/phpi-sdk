@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\XdrModel;
+namespace PiSdk\Api\XdrModel;
 
 
-use Greenarmor\\PiSdk\Model\PiAmount;
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
+use PiSdk\Api\Model\PiAmount;
+use PiSdk\Api\Xdr\XdrBuffer;
 
 class InflationPayout
 {

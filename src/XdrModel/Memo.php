@@ -1,11 +1,11 @@
 <?php
 
-namespace Greenarmor\\PiSdk\XdrModel;
+namespace PiSdk\Api\XdrModel;
 
 
-use Greenarmor\\PiSdk\Util\Debug;
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
-use Greenarmor\\PiSdk\Xdr\XdrEncoder;
+use PiSdk\Api\Util\Debug;
+use PiSdk\Api\Xdr\XdrBuffer;
+use PiSdk\Api\Xdr\XdrEncoder;
 
 /**
  *

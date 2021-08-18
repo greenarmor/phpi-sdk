@@ -1,12 +1,12 @@
 <?php
 
-namespace Greenarmor\\PiSdk\XdrModel;
+namespace PiSdk\Api\XdrModel;
 
 
-use Greenarmor\\PiSdk\AddressableKey;
-use Greenarmor\\PiSdk\Util\MathSafety;
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
-use Greenarmor\\PiSdk\Xdr\XdrEncoder;
+use PiSdk\Api\AddressableKey;
+use PiSdk\Api\Util\MathSafety;
+use PiSdk\Api\Xdr\XdrBuffer;
+use PiSdk\Api\Xdr\XdrEncoder;
 
 /**
  * Represents a time range

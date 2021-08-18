@@ -24,8 +24,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Greenarmor\\PiSdk\\": "src/",
-            "Greenarmor\\PirSdk\\Test\\": "tests/"
+            "PiSdk\\Api\\": "src/",
+            "PiSdk\\Api\\Test\\": "tests/"
         }
     },
     "require": {

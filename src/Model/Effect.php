@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Model;
+namespace PiSdk\Api\Model;
 
 /**
  * See: https://www.stellar.org/developers/horizon/reference/resources/effect.html

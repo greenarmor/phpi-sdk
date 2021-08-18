@@ -1,19 +1,19 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\XdrModel;
+namespace PiSdk\Api\XdrModel;
 
 
-use Greenarmor\\PiSdk\Keypair;
-use Greenarmor\\PiSdk\Server;
-use Greenarmor\\PiSdk\Transaction\Transaction;
-use Greenarmor\\PiSdk\Transaction\TransactionBuilder;
-use Greenarmor\\PiSdk\Util\Debug;
-use Greenarmor\\PiSdk\Util\Hash;
-use Greenarmor\\PiSdk\Xdr\Iface\XdrEncodableInterface;
-use Greenarmor\\PiSdk\Xdr\Type\VariableArray;
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
-use Greenarmor\\PiSdk\Xdr\XdrEncoder;
+use PiSdk\Api\Keypair;
+use PiSdk\Api\Server;
+use PiSdk\Api\Transaction\Transaction;
+use PiSdk\Api\Transaction\TransactionBuilder;
+use PiSdk\Api\Util\Debug;
+use PiSdk\Api\Util\Hash;
+use PiSdk\Api\Xdr\Iface\XdrEncodableInterface;
+use PiSdk\Api\Xdr\Type\VariableArray;
+use PiSdk\Api\Xdr\XdrBuffer;
+use PiSdk\Api\Xdr\XdrEncoder;
 
 class TransactionEnvelope implements XdrEncodableInterface
 {

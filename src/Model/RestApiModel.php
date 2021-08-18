@@ -1,8 +1,8 @@
 <?php
 
-namespace Greenarmor\\PiSdk\Model;
+namespace PiSdk\Api\Model;
 
-use Greenarmor\\PiSdk\Horizon\ApiClient;
+use PiSdk\Api\Horizon\ApiClient;
 
 class RestApiModel
 {

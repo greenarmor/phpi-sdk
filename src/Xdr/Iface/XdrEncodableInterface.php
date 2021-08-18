@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Xdr\Iface;
+namespace PiSdk\Api\Xdr\Iface;
 
 
 interface XdrEncodableInterface

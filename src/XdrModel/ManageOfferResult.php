@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\XdrModel;
+namespace PiSdk\Api\XdrModel;
 
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
+use PiSdk\Api\Xdr\XdrBuffer;
 
 class ManageOfferResult extends OperationResult
 {

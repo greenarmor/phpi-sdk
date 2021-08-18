@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\XdrModel\Operation;
+namespace PiSdk\Api\XdrModel\Operation;
 
 
 /**

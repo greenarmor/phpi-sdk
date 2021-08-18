@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk;
+namespace PiSdk\Api;
 
 
 use ParagonIE\Sodium\Core\Ed25519;
-use Greenarmor\\PiSdk\Derivation\Bip39\Bip39;
-use Greenarmor\\PiSdk\Derivation\HdNode;
-use Greenarmor\\PiSdk\XdrModel\DecoratedSignature;
+use PiSdk\Api\Derivation\Bip39\Bip39;
+use PiSdk\Api\Derivation\HdNode;
+use PiSdk\Api\XdrModel\DecoratedSignature;
 
 /**
  * A public/private keypair for use with the Stellar network
@@ -50,7 +50,6 @@ class Keypair
      */
     private $mnemonic;
 
-
     /**
      * Creates a new random keypair
      *
@@ -60,6 +59,7 @@ class Keypair
     {
         return self::newFromRawSeed(random_bytes(32));
     }
+
     /**
      * Creates a new random keypair with random mnemonic
      *
@@ -293,6 +293,7 @@ class Keypair
 
         return $sk;
     }
+
     public function getSeed()
     {
         return $this->seed;

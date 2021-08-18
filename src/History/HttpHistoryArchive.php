@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\History;
+namespace PiSdk\Api\History;
 
 
 use GuzzleHttp\Client;
 use Symfony\Component\Filesystem\Filesystem;
-use Greenarmor\\PiSdk\Util\Json;
+use PiSdk\Api\Util\Json;
 
 /**
  * Manages downloading from a HTTP history archive

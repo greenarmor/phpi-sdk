@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Model;
+namespace PiSdk\Api\Model;
 
 
 use phpseclib3\Math\BigInteger;
-use Greenarmor\\PiSdk\XdrModel\Operation\BumpSequenceOp;
+use PiSdk\Api\XdrModel\Operation\BumpSequenceOp;
 
 class BumpSequenceOperation extends Operation
 {

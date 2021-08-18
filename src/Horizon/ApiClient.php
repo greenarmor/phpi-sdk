@@ -1,30 +1,30 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Horizon;
+namespace PiSdk\Api\Horizon;
 
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ServerException;
-use Greenarmor\\PiSdk\Horizon\Api\HorizonResponse;
-use Greenarmor\\PiSdk\Horizon\Api\PostTransactionResponse;
-use Greenarmor\\PiSdk\Horizon\Exception\HorizonException;
-use Greenarmor\\PiSdk\Horizon\Exception\PostTransactionException;
-use Greenarmor\\PiSdk\Model\Account;
-use Greenarmor\\PiSdk\Model\AccountMergeOperation;
-use Greenarmor\\PiSdk\Model\CreateAccountOperation;
-use Greenarmor\\PiSdk\Model\Effect;
-use Greenarmor\\PiSdk\Model\Ledger;
-use Greenarmor\\PiSdk\Model\Operation;
-use Greenarmor\\PiSdk\Model\PathPayment;
-use Greenarmor\\PiSdk\Model\Payment;
-use Greenarmor\\PiSdk\Model\Transaction;
-use Greenarmor\\PiSdk\Transaction\TransactionBuilder;
-use Greenarmor\\PiSdk\Util\Hash;
-use Greenarmor\\PiSdk\Util\Json;
-use Greenarmor\\PiSdk\Xdr\XdrEncoder;
-use Greenarmor\\PiSdk\XdrModel\TransactionEnvelope;
+use PiSdk\Api\Horizon\Api\HorizonResponse;
+use PiSdk\Api\Horizon\Api\PostTransactionResponse;
+use PiSdk\Api\Horizon\Exception\HorizonException;
+use PiSdk\Api\Horizon\Exception\PostTransactionException;
+use PiSdk\Api\Model\Account;
+use PiSdk\Api\Model\AccountMergeOperation;
+use PiSdk\Api\Model\CreateAccountOperation;
+use PiSdk\Api\Model\Effect;
+use PiSdk\Api\Model\Ledger;
+use PiSdk\Api\Model\Operation;
+use PiSdk\Api\Model\PathPayment;
+use PiSdk\Api\Model\Payment;
+use PiSdk\Api\Model\Transaction;
+use PiSdk\Api\Transaction\TransactionBuilder;
+use PiSdk\Api\Util\Hash;
+use PiSdk\Api\Util\Json;
+use PiSdk\Api\Xdr\XdrEncoder;
+use PiSdk\Api\XdrModel\TransactionEnvelope;
 
 class ApiClient
 {

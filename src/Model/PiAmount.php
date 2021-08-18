@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Model;
+namespace PiSdk\Api\Model;
 
 
-use phpseclib3\Math\BigInteger;
-use Greenarmor\\PiSdk\Util\MathSafety;
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
+//use phpseclib3\Math\BigInteger;
+use PiSdk\Api\Util\MathSafety;
+use PiSdk\Api\Xdr\XdrBuffer;
 
 /**
  * Helper class for working with stellar values

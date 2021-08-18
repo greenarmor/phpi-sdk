@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Horizon\Exception;
+namespace PiSdk\Api\Horizon\Exception;
 
 
 use GuzzleHttp\Exception\ClientException;
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
-use Greenarmor\\PiSdk\XdrModel\TransactionResult;
+use PiSdk\Api\Xdr\XdrBuffer;
+use PiSdk\Api\XdrModel\TransactionResult;
 
 class PostTransactionException extends HorizonException
 {

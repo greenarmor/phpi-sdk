@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Model;
+namespace PiSdk\Api\Model;
 
 
 class PathPayment extends Operation implements AssetTransferInterface

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Xdr;
+namespace PiSdk\Api\Xdr;
 
 use phpseclib3\Math\BigInteger;
-use Greenarmor\\PiSdk\Xdr\Iface\XdrEncodableInterface;
+use PiSdk\Api\Xdr\Iface\XdrEncodableInterface;
 
 
 /**

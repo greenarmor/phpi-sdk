@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\XdrModel;
+namespace PiSdk\Api\XdrModel;
 
 
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
-use Greenarmor\\PiSdk\XdrModel\Operation\Operation;
+use PiSdk\Api\Xdr\XdrBuffer;
+use PiSdk\Api\XdrModel\Operation\Operation;
 
 class OperationResult
 {

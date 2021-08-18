@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\XdrModel\Operation;
+namespace PiSdk\Api\XdrModel\Operation;
 
 
-use Greenarmor\\PiSdk\Xdr\XdrBuffer;
-use Greenarmor\\PiSdk\Xdr\XdrEncoder;
-use Greenarmor\\PiSdk\XdrModel\AccountId;
-use Greenarmor\\PiSdk\XdrModel\Asset;
+use PiSdk\Api\Xdr\XdrBuffer;
+use PiSdk\Api\Xdr\XdrEncoder;
+use PiSdk\Api\XdrModel\AccountId;
+use PiSdk\Api\XdrModel\Asset;
 
 class AllowTrustOp extends Operation
 {

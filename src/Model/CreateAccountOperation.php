@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Model;
+namespace PiSdk\Api\Model;
 
 
 class CreateAccountOperation extends Operation implements AssetTransferInterface

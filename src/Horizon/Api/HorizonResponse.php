@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Greenarmor\\PiSdk\Horizon\Api;
+namespace PiSdk\Api\Horizon\Api;
 
 
 class HorizonResponse
