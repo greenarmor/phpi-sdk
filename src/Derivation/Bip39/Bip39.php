@@ -216,4 +216,34 @@ class Bip39
 
         return $this->words;
     }
+    /**
+     * @param int $wordCount
+     * @return string
+     */
+    public function createMnemonic($wordCount = 24)
+    {
+        foreach (range(1, 10000) as $counter) {
+            $mnemonic = $this->generateWords($wordCount);
+
+            try {
+                $this->mnemonicToEntropy($mnemonic);
+
+                return $mnemonic;
+            } catch (\Exception $e) {
+            }
+        }
+
+        throw new \Exception('Unable to generate a good mnemonic in 10.000 tries. Something might be wrong with code, please report this.');
+    }
+
+    public function generateWords($wordCount)
+    {
+        $words = [];
+
+        while (count($words) < $wordCount) {
+            $words[] = $this->words[rand(0, count($this->words) - 1)];
+        }
+
+        return implode(' ', $words);
+    }
 }
