@@ -3,7 +3,7 @@
 namespace PiSdk\Api;
 
 
-use phpseclib\Math\BigInteger;
+use phpseclib3\Math\BigInteger;
 use Prophecy\Exception\InvalidArgumentException;
 use PiSdk\Api\Horizon\ApiClient;
 use PiSdk\Api\Horizon\Exception\HorizonException;

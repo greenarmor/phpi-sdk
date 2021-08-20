@@ -57,7 +57,7 @@ class ApiClient
      */
     public static function newTestnetClient()
     {
-        $apiClient = new ApiClient('https://testnet3.minepi.com/', self::NETWORK_PASSPHRASE_TEST);
+        $apiClient = new ApiClient('https://api.testnet.minepi.com', self::NETWORK_PASSPHRASE_TEST);
         $apiClient->isTestnet = true;
 
         return $apiClient;
@@ -68,7 +68,7 @@ class ApiClient
      */
     public static function newPublicClient()
     {
-        return new ApiClient('https://testnet3.minepi.com', self::NETWORK_PASSPHRASE_PUBLIC);
+        return new ApiClient('https://api.testnet.minepi.com', self::NETWORK_PASSPHRASE_PUBLIC);
     }
 
     /**
